@@ -1,4 +1,3 @@
-# Check for Binary
 bool isBinary(string str)
 {
    // Your code here
