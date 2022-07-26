@@ -1,0 +1,15 @@
+class Solution
+{
+  public:
+    string modify (string s)
+    {
+        //code here.
+        string rev;
+        for(int i=0;i<s.size();i++){
+            if(s[i]!=' '){
+                rev+=s[i];
+            }
+        }
+        return rev;
+    }
+};
