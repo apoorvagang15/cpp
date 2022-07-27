@@ -1,0 +1,27 @@
+class Solution
+{
+    public:
+        vector <int> count (string s)
+        {
+            //code here.
+            vector<int>cnt;
+            int upp=0, lw=0, dgt=0, spc=0;
+            for(int i=0;i<s.size();i++){
+                if(isupper(s[i])){
+                    upp++;
+                }else if(islower(s[i])){
+                    lw++;
+                }else if(isdigit(s[i])){
+                    dgt++;
+                }else {
+                    spc++;
+                }
+            }
+            cnt.push_back(upp);
+            cnt.push_back(lw);
+            cnt.push_back(dgt);
+            cnt.push_back(spc);
+            return cnt;
+
+        }
+};
