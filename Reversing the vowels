@@ -1,0 +1,29 @@
+class Solution
+{
+    public:
+        string modify (string s)
+        {
+            string rev;
+            string fn;
+            int temp=0;
+            for(int i=s.size()-1;i>=0;i--){
+                if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+                    rev+=s[i];
+                }
+            }
+            for(int i=0;i<s.size();i++){
+                if(s[i]=='a' || s[i]=='e' || s[i]=='o' || s[i]=='u' || s[i]=='i'){
+                    fn+=rev[temp++];
+                }else{
+                    fn+= s[i];
+                }
+            }
+            if(rev==""){
+                return s;
+            }else if(rev.length()-1==temp){
+                return rev;
+            }else{
+                return fn;
+            }
+        }
+};
