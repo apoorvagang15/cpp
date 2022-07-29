@@ -1,0 +1,11 @@
+class Solution {
+  public:
+    string javaSub(string S, int L, int R) {
+        
+        string r;
+        for(int i=L;i<R+1;i++){
+            r+=S[i];
+        }
+        return r;
+    } 
+};
