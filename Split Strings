@@ -1,0 +1,24 @@
+class Solution
+{   
+public:
+    vector<string> splitString(string S) 
+    { 
+        vector<string>t;
+        string r1,r2,r3;
+        for(int i=0;i<S.size();i++){
+            if((S[i]>=65 && S[i]<=90) || (S[i]>=97 && S[i]<=122)){
+                r1+=S[i];
+            }
+            else if(isdigit(S[i])){
+                r2+=S[i];
+            }else{
+                r3+=S[i];
+            }
+        }
+        t.push_back(r1);
+        t.push_back(r2);
+        t.push_back(r3);
+        return t;
+    }
+
+};
