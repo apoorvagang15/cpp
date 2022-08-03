@@ -1,0 +1,13 @@
+class Solution{
+public:	
+	
+	vector<string> pattern(string S)
+	{
+	    vector<string>t;
+	    for(int i=S.size();i>=1;i--){
+	        t.push_back(S.substr(0,i));
+	    }
+	    return t;
+	}
+
+};
